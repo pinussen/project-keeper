@@ -22,6 +22,14 @@ Reuse existing equivalent plans, tickets, logs and handoffs rather than creating
 
 If history is missing or contradictory, identify the uncertainty and reconcile it from evidence. Never invent past work. If a small missing detail does not affect the outcome, state a reasonable assumption and continue authorized work.
 
+### First adoption in an existing project
+
+Treat onboarding as a bounded state reconciliation, not a new project or general audit. Inspect the existing plan, relevant issues, recent history, working-tree changes and deliverables only far enough to establish the current outcome, phase and next action. Preserve unrelated and uncommitted work; do not perform implementation changes during onboarding unless separately authorized.
+
+Reconstruct the delivery contract from existing decisions. Label each relevant result as verified, reported complete but unverified, in progress, blocked or unknown, with its evidence/source. Do not equate a commit, closed issue or old test report with current acceptance. Keep evidence labels separate from task status; missing historical evidence is not proof of a defect and does not automatically reopen completed scope. Ask only about material gaps or conflicts; preserve uncertainty when access is unavailable.
+
+Reuse authoritative records and stable task identifiers. Add a dated onboarding baseline to the existing plan and a present-day log entry citing the sources used. Mark historical summaries as retrospective; never fabricate past log entries, dates or decisions. Record remaining criteria, blockers/owners and the next action; defer unrelated improvements. Stop onboarding when this baseline is usable, report unresolved gaps and resume only already-authorized work. Do not require exhaustive tests or a separate approval ceremony just to onboard.
+
 ## 3. Define the delivery contract
 
 Before substantial work, establish:

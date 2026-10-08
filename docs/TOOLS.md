@@ -25,6 +25,8 @@ These instructions configure Project Keeper in an existing, working AI tool. If 
 
 Installing instructions for one assistant does not configure another assistant in the same editor. For example, choosing Claude inside Copilot does not make Copilot read Claude Code's configuration.
 
+After installation, use [the onboarding guide](ONBOARDING.md) if the target project is already underway. It includes a ready-to-use prompt and a clear stopping point.
+
 ## What “supported” means here
 
 The guides were checked against the official documentation linked in each guide on **2026-10-08**. Generated adapters and documentation links are checked locally. We have not run every application or every version. Menu labels and capabilities can vary; if a documented control is missing, use the named official source rather than guessing another setting.

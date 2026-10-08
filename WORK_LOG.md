@@ -64,3 +64,17 @@
 ## 2026-10-08 — setup guides delivered
 - Published d6989eaf56c9c434f01e933bfa208bf477f1327a and verified every remote repository file against the reviewed local content (29 files).
 - Marked I3 complete. Each listed assistant has an explicit route; optional alternatives and version limitations are identified. No further phase started.
+
+## 2026-10-08 — existing-project onboarding started
+- Started O1 after explicit approval to add onboarding and prepare for practical testing.
+- Read current policy, plan and recent log. Scope is a bounded onboarding guide, canonical policy coverage and navigation links; no project migration or tool installation is being performed.
+
+## 2026-10-08 — onboarding workflow drafted
+- Completed O1: added docs/ONBOARDING.md with a ready-to-use prompt, evidence labels, preservation rules, baseline contents and a stop condition.
+- Added self-contained onboarding rules to the canonical policy, so installed adapters do not depend on an unavailable guide path. Linked the guide from README, tool index and common setup; added boundary examples.
+- O2 in progress. No real external project has been onboarded by this change.
+
+## 2026-10-08 — onboarding checks passed
+- All ten regenerated adapters match the canonical policy. Checked 42 local links/anchors and git diff --check.
+- Windsurf workspace adapter is 10,373 characters, below its enforced 12,000-character limit.
+- O2 publication pending; the change is ready for practical onboarding tests, which have not been performed here.

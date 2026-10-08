@@ -51,6 +51,8 @@ Expected: no new project administration; perform proportionate verification when
 
 ## 5. Start real work
 
+For an existing project, follow [Onboard an existing project](../ONBOARDING.md) before resuming substantial work. Do not overwrite its current records with blank templates.
+
 Describe the outcome you want. You do not need to copy the templates into every project in advance. For actual project work, the assistant should first reuse an existing plan/log; create them only when needed. A small standalone task should bypass that process.
 
 ## Update or remove

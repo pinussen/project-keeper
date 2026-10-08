@@ -19,3 +19,12 @@ These are examples and manual review scenarios, not results from testing every s
 | No timeframe has been discussed. | Plan dependencies and milestones without inventing a completion date. |
 | An assistant is working in an outdated clone. | Read/synchronize through the project's normal workflow and preserve others' changes; do not overwrite current status. |
 | An adopting project uses a language other than English. | Follow its communication and documentation conventions. This repository's English-language maintenance rule does not impose English on adopting projects. |
+
+## Existing-project adoption
+
+| Situation | Expected behavior |
+| --- | --- |
+| Existing issues say work is done, but current verification is unavailable. | Preserve the historical claim, label its evidence as unverified and investigate only if it affects remaining acceptance. |
+| Two plans disagree about the current milestone. | Identify the conflict and authoritative source; ask only if evidence cannot resolve a material decision. |
+| An old project has no work log. | Start a dated onboarding entry now; cite retrospective context without inventing earlier entries. |
+| Onboarding reveals optional refactoring opportunities. | Defer them and finish the baseline; do not turn adoption into a code audit. |

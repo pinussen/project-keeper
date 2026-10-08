@@ -69,3 +69,13 @@ Scope change, 2026-10-08: replace the reference-only setup guide with beginner-r
 Automatic installers remain excluded. Provide one clear recommended route per tool before optional global alternatives.
 
 Setup-guide follow-up complete. Guides are documentation-verified, not live-tested in every IDE. No automatic installer or adopting-environment configuration was added.
+
+## Follow-up: onboard existing projects
+Scope change, 2026-10-08: add a bounded onboarding workflow, then hand the version over for practical testing.
+
+| Step | Acceptance criterion | Status | Evidence |
+| --- | --- | --- | --- |
+| O1 | Guide and canonical policy recover existing state, preserve authoritative records, label uncertainty and avoid invented history or scope expansion. | Done | docs/ONBOARDING.md and policy section 2; historical uncertainty and authorization boundaries explicit |
+| O2 | Link onboarding from setup/README, regenerate adapters, check consistency and publish. | In progress | Navigation linked; checking generated adapters and documentation |
+
+No additional features are included in this follow-up.

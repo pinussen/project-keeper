@@ -26,6 +26,8 @@ Set up each relevant environment once. Preserve existing instructions; there is 
 
 Supported setup guides cover VS Code, Kiro, Cursor, Windsurf/Cascade, JetBrains AI Assistant and Junie, Copilot in Visual Studio/JetBrains/Xcode/Eclipse, Claude Code, Codex and OpenClaw. Choose the assistant as well as the editor: their configuration is not interchangeable.
 
+Already working on a project? Follow [Onboard an existing project](docs/ONBOARDING.md) to recover its current state without restarting it.
+
 ## Repository contents
 
 | File or directory | Purpose |
@@ -34,6 +36,7 @@ Supported setup guides cover VS Code, Kiro, Cursor, Windsurf/Cascade, JetBrains 
 | [templates/](templates/) | Lightweight project-plan and work-log templates |
 | [adapters/](adapters/) | Generated instruction files for supported tools |
 | [docs/TOOLS.md](docs/TOOLS.md) | Step-by-step setup, updates and activation checks |
+| [docs/ONBOARDING.md](docs/ONBOARDING.md) | Bounded onboarding for projects already underway |
 | [docs/EXAMPLES.md](docs/EXAMPLES.md) | Expected behavior and manual review scenarios |
 | [PROJECT_PLAN.md](PROJECT_PLAN.md) and [WORK_LOG.md](WORK_LOG.md) | Plan and history for developing Project Keeper itself |
 
