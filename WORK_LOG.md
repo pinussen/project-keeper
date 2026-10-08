@@ -82,3 +82,10 @@
 ## 2026-10-08 — onboarding delivered; ready for testing
 - Published b2a71f5464efd03d5d3176089093f99c800e541d; fetched remote main and compared all 30 files with local content. All matched.
 - O2 complete. The implementation/documentation phase is closed and ready for practical testing. No actual project onboarding or IDE runtime test is claimed.
+
+## 2026-10-08 — Claude setup clarification from practical feedback
+- A user reported that Claude CLI found the global instruction file, but the guide left the source contents and relationship to repository CLAUDE.md files unclear.
+- Rewrote docs/setup/CLAUDE.md around one complete global-copy route: exact source text, destination, filename, existing-content preservation, global/project coexistence and /memory verification.
+- Moved imports and project-only installation after the explicit installation-complete point. Linked onboarding as the next optional action.
+- This is a bounded documentation fix; no policy change or new feature scope. The reported loading success is not a claim of full behavioral testing.
+- Validation: all links and section anchors in the revised guide resolve; git diff --check passed.
