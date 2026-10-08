@@ -19,10 +19,12 @@ Project Keeper consists of instructions and templates. It is not an agent server
 ## Getting started
 
 1. Clone this repository onto the computer or server where the assistant runs.
-2. Connect the appropriate instruction file using the [tool guide](docs/TOOLS.md). Cloning alone does not activate the instructions.
+2. Follow the [step-by-step installation guide](docs/TOOLS.md) for your actual assistant. Cloning alone does not activate the instructions.
 3. Reuse the adopting project's existing plan and log. If none exist, start with the [templates](templates/).
 
 Set up each relevant environment once. Preserve existing instructions; there is no need to configure every supported tool at the same time.
+
+Supported setup guides cover VS Code, Kiro, Cursor, Windsurf/Cascade, JetBrains AI Assistant and Junie, Copilot in Visual Studio/JetBrains/Xcode/Eclipse, Claude Code, Codex and OpenClaw. Choose the assistant as well as the editor: their configuration is not interchangeable.
 
 ## Repository contents
 
@@ -31,7 +33,7 @@ Set up each relevant environment once. Preserve existing instructions; there is 
 | [PROJECT_KEEPER.md](PROJECT_KEEPER.md) | Canonical, tool-independent policy |
 | [templates/](templates/) | Lightweight project-plan and work-log templates |
 | [adapters/](adapters/) | Generated instruction files for supported tools |
-| [docs/TOOLS.md](docs/TOOLS.md) | Installation, updates and activation checks |
+| [docs/TOOLS.md](docs/TOOLS.md) | Step-by-step setup, updates and activation checks |
 | [docs/EXAMPLES.md](docs/EXAMPLES.md) | Expected behavior and manual review scenarios |
 | [PROJECT_PLAN.md](PROJECT_PLAN.md) and [WORK_LOG.md](WORK_LOG.md) | Plan and history for developing Project Keeper itself |
 

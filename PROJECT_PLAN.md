@@ -56,3 +56,14 @@ Explicit scope change, 2026-10-08: make the repository generic and suitable for 
 No new tool integrations or installation features are included.
 
 Follow-up complete: public documentation is English and generic. No additional phase has started.
+
+## Follow-up: explicit setup guides and additional IDEs
+Scope change, 2026-10-08: replace the reference-only setup guide with beginner-ready instructions and cover additional common IDEs.
+
+| Step | Acceptance criterion | Status | Evidence |
+| --- | --- | --- | --- |
+| I1 | Each supported setup states prerequisites, scope, exact source/destination or menu, preservation of existing content, activation check and troubleshooting. | Done | Common start guide and separate tool recipes with checks/troubleshooting |
+| I2 | Add Cursor, Windsurf, JetBrains AI Assistant/Junie and Copilot in Visual Studio, JetBrains, Xcode and Eclipse where documented. | Done | Official sources reviewed; four new adapters generated |
+| I3 | Check generated adapters, links and installation examples; publish verified documentation. | In progress | Ten adapters verified; checking document navigation and examples |
+
+Automatic installers remain excluded. Provide one clear recommended route per tool before optional global alternatives.

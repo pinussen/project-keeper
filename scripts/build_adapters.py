@@ -11,6 +11,10 @@ PREFIXES = {
     'copilot/copilot-instructions.md': '',
     'copilot/project-keeper.instructions.md': '---\napplyTo: "**"\ndescription: "Manage multi-step projects, plans, work logs and delivery; exempt small standalone tasks."\n---\n\n',
     'openclaw/AGENTS.md': '',
+    'cursor/project-keeper.mdc': '---\nalwaysApply: true\n---\n\n',
+    'windsurf/project-keeper.md': '---\ntrigger: always_on\n---\n\n',
+    'jetbrains/project-keeper.md': '',
+    'junie/AGENTS.md': '',
 }
 
 def main():
@@ -22,6 +26,8 @@ def main():
     for name, prefix in PREFIXES.items():
         path = ROOT / 'adapters' / name
         expected = prefix + source
+        if name.startswith('windsurf/') and len(expected) > 12000:
+            raise ValueError('Windsurf workspace rule exceeds 12,000 characters')
         if args.check:
             if not path.exists() or path.read_text(encoding='utf-8') != expected:
                 mismatches.append(name)

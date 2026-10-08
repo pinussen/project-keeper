@@ -45,3 +45,18 @@
 ## 2026-10-08 — public-audience update delivered
 - Published cf3aa107a26b4836423e418da1b24a03a05c2567 and fetched remote main. Every tracked file matched the reviewed local version byte-for-byte.
 - G3 complete. English documentation and generic usage guidance are now published; no adopting environments were modified.
+
+## 2026-10-08 — explicit installation guides started
+- Started I1 after the request for complete beginner-facing instructions and broader IDE coverage.
+- Reviewed repository instructions and current plan; began checking official rules documentation for additional tools.
+- Scope is setup documentation and required generated adapters, not an installer or changes to user environments.
+
+## 2026-10-08 — setup guides and IDE coverage drafted
+- Completed I1/I2: replaced the lookup table with a navigation index, common beginner setup and separate tool guides. Documented raw-text copying, exact roots, existing-file preservation, activation, updates and removal.
+- Added Cursor, Windsurf/Cascade, JetBrains AI Assistant and Junie adapters; documented additional Copilot IDEs. Distinguished different assistants inside the same IDE.
+- Checked official documentation; Windsurf docs now redirect to Devin Desktop/Cascade, so the guide identifies its agent scope and directory alternatives. The generator enforces the 12,000-character workspace-rule limit.
+- Generated and checked all ten adapters successfully. I3 validation in progress; live IDE testing is not claimed.
+
+## 2026-10-08 — setup guide validation
+- Checked 37 relative links/anchors, all named adapter sources, ten generated adapters and the Windsurf rule size. All passed; git diff --check was clean.
+- I3 content validation complete; publication and remote comparison are next. No IDE runtime test or local installation was performed.

@@ -1,53 +1,34 @@
-# Using Project Keeper with different tools
+# Installation guide
 
-Checked against official documentation on 2026-10-08. Tool version, agent type and execution environment can affect instruction loading. This guide does not install anything automatically.
+Start with [the common setup steps](setup/START.md), then choose **one** guide below. Each guide states its scope, source file, destination, activation check and likely failure points. No script in this repository installs instructions into an application.
 
-## Common approach
+These instructions configure Project Keeper in an existing, working AI tool. If you have not installed or signed into that tool yet, use its linked official documentation first and confirm that a simple chat works. You do not need Python unless you modify the policy and regenerate adapters.
 
-PROJECT_KEEPER.md is the canonical policy. Adapters contain the same text with tool-specific frontmatter where necessary. Generate them with scripts/build_adapters.py; do not maintain separate copies by hand.
+## Choose your actual assistant
 
-Read existing instructions before installation. Use a separate file where supported; otherwise insert a clearly bounded Project Keeper section without replacing unrelated content. On updates, replace only that section and avoid duplicates. Do not replace an existing AGENTS.md or CLAUDE.md with a link that would hide its other instructions.
-
-Install instructions where the assistant actually runs. Native Windows, WSL, SSH sessions, containers and servers can have different home directories. A separately cloned repository is not automatically loaded merely because it exists on disk. In the table below, `~` denotes the home directory of the account running the tool; use the appropriate native path for that environment.
-
-## Instruction locations
-
-| Tool | Adapter | Location or activation |
+| Editor or environment | Assistant | Guide |
 | --- | --- | --- |
-| Kiro IDE/CLI | adapters/kiro/project-keeper.md | A separate file under ~/.kiro/steering/ for local projects, or .kiro/steering/ within a project. The adapter specifies inclusion: always. |
-| Codex CLI | adapters/codex/AGENTS.md | Insert into the active global instruction file under CODEX_HOME, normally ~/.codex/AGENTS.md. If AGENTS.override.md exists, it takes precedence at that level. Project instructions can affect the resulting behavior. |
-| Claude Code CLI and the Claude Code VS Code extension | adapters/claude/CLAUDE.md | Insert into ~/.claude/CLAUDE.md, or use a documented @path import pointing to the cloned PROJECT_KEEPER.md. Use the actual local path. |
-| Copilot Agent Host in VS Code | adapters/copilot/copilot-instructions.md | Insert into ~/.copilot/copilot-instructions.md for personal instructions. |
-| Copilot Local in VS Code | adapters/copilot/project-keeper.instructions.md | Create a user instruction through Chat: Open Customizations for the selected agent and use the adapter contents. applyTo: "**" covers matching file work. |
-| Copilot project instructions | adapters/copilot/copilot-instructions.md | Insert into the project's .github/copilot-instructions.md, including for project conversations where a file-matched instruction might not activate. |
-| OpenClaw | adapters/openclaw/AGENTS.md | Insert into AGENTS.md in each relevant agent's actual workspace. The default is commonly ~/.openclaw/workspace, but check the active configuration. |
+| VS Code | GitHub Copilot, including Claude selected as its model | [Copilot in VS Code](setup/COPILOT.md#vs-code) |
+| VS Code | Claude Code extension | [Claude Code](setup/CLAUDE.md) |
+| VS Code | Codex extension | [Codex](setup/CODEX.md) |
+| Kiro | Built-in assistant / Kiro CLI | [Kiro](setup/KIRO.md) |
+| Cursor | Agent | [Cursor](setup/CURSOR.md) |
+| Windsurf / Cascade | Cascade | [Windsurf](setup/WINDSURF.md) |
+| IntelliJ IDEA, PyCharm, WebStorm or another compatible JetBrains IDE | AI Assistant | [JetBrains AI Assistant](setup/JETBRAINS.md#ai-assistant) |
+| JetBrains IDE | Junie | [Junie](setup/JETBRAINS.md#junie) |
+| JetBrains IDE | GitHub Copilot | [Copilot in JetBrains](setup/COPILOT.md#jetbrains-ides) |
+| Visual Studio (different from VS Code) | GitHub Copilot | [Copilot in Visual Studio](setup/COPILOT.md#visual-studio) |
+| Xcode | GitHub Copilot extension | [Copilot in Xcode](setup/COPILOT.md#xcode) |
+| Eclipse | GitHub Copilot extension | [Copilot in Eclipse](setup/COPILOT.md#eclipse) |
+| Terminal | Claude Code CLI / Codex CLI | [Claude](setup/CLAUDE.md) / [Codex](setup/CODEX.md) |
+| OpenClaw server | Configured OpenClaw agent | [OpenClaw](setup/OPENCLAW.md) |
 
-Kiro custom agents need to include the relevant steering files explicitly in their resources. Do not assume global steering reaches every custom agent automatically.
+Installing instructions for one assistant does not configure another assistant in the same editor. For example, choosing Claude inside Copilot does not make Copilot read Claude Code's configuration.
 
-“Claude in VS Code” can mean either the Claude model selected in Copilot, which uses Copilot instructions, or the Claude Code extension, which uses Claude Code instructions.
+## What “supported” means here
 
-Copilot instructions apply to agent/chat interactions, not inline completions while typing. For Copilot Local, file-matched user instructions do not guarantee inclusion in a planning-only conversation. Use project instructions or attach the instruction when necessary. Select the appropriate agent type in VS Code's customization settings.
+The guides were checked against the official documentation linked in each guide on **2026-10-08**. Generated adapters and documentation links are checked locally. We have not run every application or every version. Menu labels and capabilities can vary; if a documented control is missing, use the named official source rather than guessing another setting.
 
-OpenClaw should reuse an existing issue or planning system when one is already authoritative. Keep the work log in the project's repository and link the relevant issue. Workspace instructions do not replace the project's actual status.
+Start with the recommended route in your guide. Optional global setup is separated from project setup so you can tell exactly where instructions apply. Do not install the same policy globally and locally unless you intentionally want both copies in context.
 
-## Import, link or copy
-
-Claude Code supports documented @path imports in CLAUDE.md. Do not assume that syntax works in other tools. For a standalone instruction file, a symbolic link can be useful if the environment supports and actually reads it; verify this locally. A regular copy is straightforward but must be updated after git pull. Automated installation and synchronization are outside the initial scope.
-
-## Installation prompt for a local assistant
-
-> Read Project Keeper's README.md, PROJECT_KEEPER.md and docs/TOOLS.md. Install its instructions for the tool and environment we are using. First identify the actual instruction location and read existing files. Preserve unrelated content and back up files before changing them. Use a separate file or documented import where appropriate; otherwise use a clearly bounded section that can be updated without duplication. Do not change other tools' configuration unless they are included in my request. Reuse the project's plan and work log. Report which files changed and what needs checking in a new session. Do not claim the instructions were loaded merely because a file was created.
-
-## Checking activation
-
-Open a new session and inspect the loaded instruction list or references where the tool provides them. If the instruction is missing, check actual paths and overrides. Try relevant scenarios from EXAMPLES.md. One successful response is not proof that every future response will follow the policy.
-
-Keep the same current project plan available when switching tools. Multiple clones require normal version control or a shared, readable planning source. Unsynchronized status copies do not provide continuity.
-
-## Official sources
-
-- Kiro: https://kiro.dev/docs/steering/
-- Codex: https://developers.openai.com/codex/guides/agents-md
-- Claude Code: https://code.claude.com/docs/en/memory
-- VS Code: https://code.visualstudio.com/docs/agent-customization/custom-instructions
-- OpenClaw: https://docs.openclaw.ai/concepts/agent-workspace
+For updates, removal, multiple machines and verification, see [common setup](setup/START.md). For expected project-management behavior, see [examples](EXAMPLES.md).
