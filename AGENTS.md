@@ -1,0 +1,7 @@
+# Working on Project Keeper
+
+Read PROJECT_KEEPER.md, PROJECT_PLAN.md and the latest entries in WORK_LOG.md before project work. Follow the applicability filter: standalone trivial changes do not require a new plan.
+
+PROJECT_KEEPER.md is the canonical reusable policy. Update generated adapters through `python3 scripts/build_adapters.py`; do not hand-edit them. Run `python3 scripts/build_adapters.py --check` before delivery when the policy or generator changes.
+
+Keep this repository's plan current at work transitions, and append concise evidence-based log entries. Preserve scope and completed decisions. Do not install instructions into user environments unless that installation is requested. Do not introduce dependencies or an automatic installer for this baseline.
