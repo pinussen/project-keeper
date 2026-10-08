@@ -28,3 +28,5 @@ These are examples and manual review scenarios, not results from testing every s
 | Two plans disagree about the current milestone. | Identify the conflict and authoritative source; ask only if evidence cannot resolve a material decision. |
 | An old project has no work log. | Start a dated onboarding entry now; cite retrospective context without inventing earlier entries. |
 | Onboarding reveals optional refactoring opportunities. | Defer them and finish the baseline; do not turn adoption into a code audit. |
+
+| The user says “Onboard this project” or the equivalent in another language. | Run the installed onboarding workflow without requiring a copied prompt; stop at the baseline unless continued work is authorized. |

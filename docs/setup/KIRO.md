@@ -1,5 +1,7 @@
 # Kiro IDE and CLI
 
+For opt-in installation and future updates, see [the installer guide](../INSTALLER.md). The instructions below remain the manual route.
+
 **Before starting:** Kiro is installed, authenticated and can answer a chat. Complete [common setup](START.md). **Recommended scope:** personal defaults across local projects. **Source:** `adapters/kiro/project-keeper.md`. **Destination:** `~/.kiro/steering/project-keeper.md`.
 
 1. Open your user home directory in the environment running Kiro. Create `.kiro`, then `steering`, if missing.

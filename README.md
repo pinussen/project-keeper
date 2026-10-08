@@ -19,8 +19,8 @@ Project Keeper consists of instructions and templates. It is not an agent server
 ## Getting started
 
 1. Clone this repository onto the computer or server where the assistant runs.
-2. Follow the [step-by-step installation guide](docs/TOOLS.md) for your actual assistant. Cloning alone does not activate the instructions.
-3. Reuse the adopting project's existing plan and log. If none exist, start with the [templates](templates/).
+2. Use the [installer/updater](docs/INSTALLER.md) to select known destinations, or follow the [manual setup guide](docs/TOOLS.md). Cloning alone does not activate the instructions.
+3. In your assistant, say **“Onboard this project”** (or the equivalent in your language). It should reuse existing records and establish a baseline. Small standalone tasks still bypass project administration.
 
 Set up each relevant environment once. Preserve existing instructions; there is no need to configure every supported tool at the same time.
 
@@ -35,6 +35,7 @@ Already working on a project? Follow [Onboard an existing project](docs/ONBOARDI
 | [PROJECT_KEEPER.md](PROJECT_KEEPER.md) | Canonical, tool-independent policy |
 | [templates/](templates/) | Lightweight project-plan and work-log templates |
 | [adapters/](adapters/) | Generated instruction files for supported tools |
+| [docs/INSTALLER.md](docs/INSTALLER.md) | Opt-in installation, backups and registered-destination updates |
 | [docs/TOOLS.md](docs/TOOLS.md) | Step-by-step setup, updates and activation checks |
 | [docs/ONBOARDING.md](docs/ONBOARDING.md) | Bounded onboarding for projects already underway |
 | [docs/EXAMPLES.md](docs/EXAMPLES.md) | Expected behavior and manual review scenarios |
@@ -59,4 +60,4 @@ Keep documentation, templates, examples and code comments in English. Make reusa
 
 ## Initial scope
 
-Instructions, templates, generated adapters and documentation. Automatic installation, a cross-project dashboard and installation in adopting environments are outside this baseline.
+Instructions, templates, generated adapters and documentation. An opt-in installer/updater now supports selected known destinations. Unattended background updates and a cross-project dashboard remain outside scope; running installation in an adopting environment is a separate user action.

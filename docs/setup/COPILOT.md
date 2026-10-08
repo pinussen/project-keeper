@@ -1,5 +1,7 @@
 # GitHub Copilot in IDEs
 
+For opt-in installation and future updates, see [the installer guide](../INSTALLER.md). The instructions below remain the manual route.
+
 **Before starting:** Copilot is installed, signed in and able to answer a chat in the target project. Complete [common setup](START.md). These routes apply to Copilot regardless of the model selected inside it. They do not configure a separate Claude Code or Codex extension.
 
 ## Shared project-file procedure

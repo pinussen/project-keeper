@@ -85,3 +85,15 @@ Current handoff: onboarding documentation delivered; ready for practical testing
 Practical-test feedback, 2026-10-08: global instruction discovery in Claude CLI was reported successful. Clarified the Claude setup guide in response; broader behavior remains unverified. This documentation correction does not reopen feature scope.
 
 Practical-test feedback, 2026-10-08: a Kiro IDE screenshot confirmed global rule discovery. Added precise panel navigation to the setup guide; behavior testing remains separate.
+
+## Follow-up: opt-in installer/updater and short onboarding requests
+Explicit scope change, 2026-10-08: implement the previously deferred installer and short natural-language onboarding activation.
+
+| Step | Acceptance criterion | Status | Evidence |
+| --- | --- | --- | --- |
+| U1 | Discover known destinations without writing; let users select targets; preserve unrelated instructions, back up changes and record installed versions. | Done | scripts/project_keeper.py: discovery, selection, backups and manifest |
+| U2 | Update only registered destinations from the latest clean Git checkout; reject local managed-content conflicts and support preview/offline use. | Done | Registered-only update, preflight checks and Git refresh covered by tests |
+| U3 | Short onboarding requests work in English and equivalent user languages; instructions and UI remain English. | Done | Short requests and equivalent user-language intent in every adapter |
+| U4 | Document concrete test commands, validate and publish. | In progress | Documentation complete; running final isolated tests |
+
+Supersedes the earlier installer exclusion for this bounded implementation. No background updater, automatic installation into every discovered tool or portfolio features are included.

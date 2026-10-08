@@ -8,9 +8,15 @@ Use this guide when adopting Project Keeper in a project that is already underwa
 2. Open the existing project's root in that assistant's environment. Make the current plan, relevant issues and any handoff notes accessible. If they live elsewhere, provide their location or an export with its date; do not share credentials in prompts.
 3. Keep existing files and uncommitted work. Do not copy blank templates over current documents or run an initialization command that replaces them.
 
+## Start with a short request
+
+Once the installed instructions are current, say **“Onboard this project”** or **“Start using Project Keeper here”** in the target project's chat. Equivalent wording in your own language works too; no exact English phrase or slash command is required. The assistant should establish the bounded baseline and stop unless continued implementation is already authorized.
+
+If these requests do not trigger onboarding, first check that the updated Project Keeper instructions are loaded. You do not normally need the longer prompt below.
+
 ## Prompt to start onboarding
 
-Paste this into your assistant in the target project:
+Optional explicit version for older installations or when you want to spell out the boundaries:
 
 > Onboard this existing project using Project Keeper. Read its current instructions, plan, recent work log and relevant evidence. Reconstruct the agreed outcome, current phase and remaining acceptance criteria without expanding scope. Reuse existing planning records and identifiers. Distinguish verified results, reported completion without verification, ongoing work, blockers and unknowns; cite the evidence. Ask only about gaps that materially affect the next decision. Add a dated onboarding baseline and a current work-log entry, preserving existing history and unrelated work. Do not change implementation, run disruptive tests, create tickets in an external system, publish or start backlog items as part of onboarding. Finish with a concise baseline and the next recommended action. Stop there unless I have separately authorized continued work.
 

@@ -94,3 +94,18 @@
 - A user-provided screenshot confirmed Project Keeper under Agent Steering & Skills → Global after opening the ghost-icon Kiro panel.
 - Expanded step 4 in docs/setup/KIRO.md with the exact navigation, Explorer distinction, nearby panel labels and expected file/breadcrumb/header. No screenshot or personal workspace details were added to the public repository.
 - This confirms UI discovery only, not behavioral compliance. Policy and adapters are unchanged.
+
+## 2026-10-08 — installer and short onboarding started
+- Explicitly authorized installer/updater development, previously deferred, with English messages and multilingual natural-language onboarding activation.
+- U1 in progress. Development and tests use temporary directories rather than real user configurations.
+
+## 2026-10-08 — installer and onboarding implementation
+- U1–U3 implemented: selectable targets, marked shared blocks/dedicated files, backups, integrity hashes, exact-copy adoption and registered-only updates with clean fast-forward Git refresh.
+- Added short English onboarding requests and equivalent user-language activation to the policy and regenerated all adapters.
+- Added an English installer guide with concrete Claude/Kiro adoption and VS Code project commands, explicit target coverage and recovery limits.
+- Initial 13 isolated tests passed. Added two further cases for Windows newlines and a newly hiding Codex override; final checks pending. No real user configurations were changed.
+
+## 2026-10-08 — installer validation passed
+- All 15 isolated tests passed, including a real local Git fast-forward/restart update, exact historical-copy adoption, CRLF handling, backups, outside-block preservation, conflicts and registered-only updates.
+- Ten adapters match the policy; 52 relative links/anchors passed, git diff --check passed and the Windsurf adapter remains below its enforced limit (10,989 characters).
+- U4 ready for publication and practical user testing. Tests ran on Linux; native Windows/macOS and live IDE behavior were not exercised.

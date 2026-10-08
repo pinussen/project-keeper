@@ -1,5 +1,7 @@
 # Claude Code: install once for all your projects
 
+For opt-in installation and future updates, see [the installer guide](../INSTALLER.md). The instructions below remain the manual route.
+
 Use this guide for **Claude Code CLI** or the **Claude Code VS Code extension**. If Claude is a model selected inside GitHub Copilot, use [the Copilot guide](COPILOT.md) instead.
 
 Claude Code must already be installed and signed in. Download or clone Project Keeper first if needed: [get the files](START.md#1-get-the-files).

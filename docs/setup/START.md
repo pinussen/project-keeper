@@ -1,5 +1,7 @@
 # Common setup: start here
 
+Prefer selected automatic installation? Use the [installer/updater guide](../INSTALLER.md). The steps below describe manual installation.
+
 ## 1. Get the files
 
 Choose one method:

@@ -1,6 +1,6 @@
 # Installation guide
 
-Start with [the common setup steps](setup/START.md), then choose **one** guide below. Each guide states its scope, source file, destination, activation check and likely failure points. No script in this repository installs instructions into an application.
+For selected known destinations, start with the [installer/updater](INSTALLER.md). For manual installation, start with [the common setup steps](setup/START.md), then choose **one** guide below. Each guide states its scope, source file, destination, activation check and likely failure points. The installer changes only explicitly selected destinations; these manual guides remain available for every listed setup.
 
 These instructions configure Project Keeper in an existing, working AI tool. If you have not installed or signed into that tool yet, use its linked official documentation first and confirm that a simple chat works. You do not need Python unless you modify the policy and regenerate adapters.
 

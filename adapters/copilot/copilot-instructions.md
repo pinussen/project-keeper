@@ -19,6 +19,8 @@ If history is missing or contradictory, identify the uncertainty and reconcile i
 
 ### First adoption in an existing project
 
+Recognize short requests such as "Onboard this project" or "Start using Project Keeper here", and equivalent requests in the user's language, as activation of this onboarding workflow. Do not require a copied prompt, exact English phrase or special slash command. If the target project is clear, begin directly; otherwise ask which project. Onboarding authorizes the bounded baseline and log updates described below, not implementation, external ticket creation or publication unless separately requested. Finish with the baseline and next recommended action, then stop unless continued work is already authorized.
+
 Treat onboarding as a bounded state reconciliation, not a new project or general audit. Inspect the existing plan, relevant issues, recent history, working-tree changes and deliverables only far enough to establish the current outcome, phase and next action. Preserve unrelated and uncommitted work; do not perform implementation changes during onboarding unless separately authorized.
 
 Reconstruct the delivery contract from existing decisions. Label each relevant result as verified, reported complete but unverified, in progress, blocked or unknown, with its evidence/source. Do not equate a commit, closed issue or old test report with current acceptance. Keep evidence labels separate from task status; missing historical evidence is not proof of a defect and does not automatically reopen completed scope. Ask only about material gaps or conflicts; preserve uncertainty when access is unavailable.
