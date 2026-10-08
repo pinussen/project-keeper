@@ -1,55 +1,57 @@
 # Project Keeper
 
-Gemensamma instruktioner som hjälper AI att planera, driva och avsluta projekt — med samma mål och historik även när du byter verktyg.
+Reusable instructions that help AI assistants plan, manage and finish projects while preserving goals and history across tools and sessions.
 
-**Planen visar var vi står. Arbetsloggen visar hur vi kom dit.** Små fristående uppgifter ska kunna göras direkt utan projektadministration.
+**The project plan shows where the work stands. The work log explains how it got there.** Small standalone tasks remain lightweight and do not require project administration.
 
-## Vad det gör
+## What it does
 
-- Definierar mål, leveranser och fasta klart-kriterier.
-- Delar upp arbetet i steg med beroenden, ansvar och rimliga milstolpar.
-- Uppdaterar projektplanen när arbete börjar, blockeras eller blir klart.
-- Kräver en kort arbetslogg i projektets repo, även för viktiga beslut, verifiering och avbrutet arbete.
-- Lägger nya förbättringsidéer i senare faser om de inte blockerar den aktuella leveransen.
-- Läser aktuell plan och logg vid återupptagning och lämnar en användbar överlämning.
-- Avslutar fasen när kriterierna är uppfyllda.
+- Defines goals, deliverables and stable acceptance criteria.
+- Breaks work into steps with dependencies, owners and useful milestones.
+- Updates the project plan when work starts, becomes blocked or finishes.
+- Maintains a concise repository work log covering decisions, verification and interrupted work.
+- Defers optional improvements to later phases unless they block the current delivery.
+- Reads the current plan and log when resuming and provides a useful handoff.
+- Closes the phase when its acceptance criteria are met.
 
-Detta är instruktioner och mallar, inte en agentserver, schedulerare eller teknisk garanti för modellens beteende. Reglerna är skrivna på engelska för återanvändning; agenten ska svara på användarens språk.
+Project Keeper consists of instructions and templates. It is not an agent server, scheduler or technical guarantee of model behavior. It supports different project domains, languages and planning systems. This repository is maintained in English; adopting projects can follow their own language conventions.
 
-## Börja här
+## Getting started
 
-1. Klona detta repo på datorn eller servern där din agent körs.
-2. Koppla in rätt instruktionsfil enligt [verktygsguiden](docs/TOOLS.md). En kloning aktiverar inte reglerna automatiskt.
-3. Låt agenten återanvända projektets befintliga plan och logg. Saknas de finns [mallar](templates/).
+1. Clone this repository onto the computer or server where the assistant runs.
+2. Connect the appropriate instruction file using the [tool guide](docs/TOOLS.md). Cloning alone does not activate the instructions.
+3. Reuse the adopting project's existing plan and log. If none exist, start with the [templates](templates/).
 
-Installationen görs en gång per berörd miljö. Bevara befintliga instruktioner. Du behöver inte installera alla verktyg samtidigt.
+Set up each relevant environment once. Preserve existing instructions; there is no need to configure every supported tool at the same time.
 
-## Innehåll
+## Repository contents
 
-| Fil/katalog | Syfte |
+| File or directory | Purpose |
 | --- | --- |
-| [PROJECT_KEEPER.md](PROJECT_KEEPER.md) | Den enda gemensamma regelkällan |
-| [templates/](templates/) | Lätta mallar för projektplan och arbetslogg |
-| [adapters/](adapters/) | Genererade instruktioner för respektive verktyg |
-| [docs/TOOLS.md](docs/TOOLS.md) | Installation, uppdatering och kontroll |
-| [docs/EXAMPLES.md](docs/EXAMPLES.md) | Exempel på förväntat beteende |
-| [PROJECT_PLAN.md](PROJECT_PLAN.md) och [WORK_LOG.md](WORK_LOG.md) | Plan och logg för utvecklingen av Project Keeper självt |
+| [PROJECT_KEEPER.md](PROJECT_KEEPER.md) | Canonical, tool-independent policy |
+| [templates/](templates/) | Lightweight project-plan and work-log templates |
+| [adapters/](adapters/) | Generated instruction files for supported tools |
+| [docs/TOOLS.md](docs/TOOLS.md) | Installation, updates and activation checks |
+| [docs/EXAMPLES.md](docs/EXAMPLES.md) | Expected behavior and manual review scenarios |
+| [PROJECT_PLAN.md](PROJECT_PLAN.md) and [WORK_LOG.md](WORK_LOG.md) | Plan and history for developing Project Keeper itself |
 
-Varje annat projekts plan och logg ska ligga i det projektets repo eller befintliga planeringssystem. Det här repot är inte en central databas över alla projekt.
+Each adopting project's plan and log belong in that project's repository or established planning system. This repository is not a central database of project status.
 
-## Uppdatera reglerna
+## Updating the policy
 
-Redigera PROJECT_KEEPER.md och kör:
+Edit PROJECT_KEEPER.md, then run:
 
 ```sh
 python3 scripts/build_adapters.py
 python3 scripts/build_adapters.py --check
 ```
 
-På Windows kan kommandot vara `py -3`. Skriptet använder endast Pythons standardbibliotek och skriver enbart adaptrarna i detta repo. Det installerar ingenting.
+On Windows, the command may be `py -3`. The script uses only the Python standard library and writes only generated adapters in this repository. It does not install anything.
 
-Efter att ändringarna sparats i Git och hämtats till andra datorer behöver lokala kopior av instruktionerna uppdateras. Dokumenterade imports eller verifierade länkar kan minska kopieringen; se verktygsguiden.
+After committing changes and pulling them on other machines, update any installed instruction copies. Documented imports or locally verified links can reduce copying; see the tool guide.
 
-## Omfattning för första versionen
+Keep documentation, templates, examples and code comments in English. Make reusable guidance independent of any particular person's projects, accounts or environment. Project-specific history belongs in the development plan and log, not in the reusable policy.
 
-Instruktioner, mallar, genererade adaptrar och dokumentation. Automatisk installation, en gemensam projektöversikt och installation på användarens datorer ingår inte. ChatGPT-skillen `finish-phase-one` ändras inte av detta repo.
+## Initial scope
+
+Instructions, templates, generated adapters and documentation. Automatic installation, a cross-project dashboard and installation in adopting environments are outside this baseline.

@@ -1,20 +1,21 @@
-# Förväntat beteende
+# Expected behavior
 
-Dessa är exempel och manuella kontrollfall, inte resultat från testning av alla verktyg.
+These are examples and manual review scenarios, not results from testing every supported tool.
 
-| Situation | Förväntat beteende |
+| Situation | Expected behavior |
 | --- | --- |
-| ”Ändra timeout från 10 till 20 i den här konfigen.” Ingen projektkoppling. | Gör den avgränsade ändringen och relevant kontroll. Skapa inte plan/logg. |
-| Samma konfigändring ingår i en pågående produktionsmigrering. | Läs projektkontext, följ dess krav och uppdatera relevant status/logg proportionerligt. Skapa inget nytt projekt. |
-| Ett nytt flerledsprojekt saknar klart-kriterier. | Formulera mål, leverans, få kontrollerbara kriterier och avgränsning innan större arbete. Fråga bara om avgörande oklarheter. |
-| AI börjar ett steg som stod som ej påbörjat. | Markera Pågår när arbetet börjar; vänta inte till slutrapporten. |
-| Kod är ändrad men avtalad verifiering återstår. | Behåll Pågår, eller Blockerat med orsak/ägare. Skriv vad som faktiskt har kontrollerats. |
-| Något måste testprintas av användaren. | Ange blockerat kriterium, vad användaren behöver göra och nästa möjliga oberoende fas-1-arbete. Hitta inte på mer modellering som ersättning. |
-| Alla avtalade säljkriterier är uppfyllda, men fler skalor vore trevligt. | Säg att fasen är klar; lägg fler skalor i senare fas. |
-| Ett nedladdningspaket visar sig sakna en nödvändig del. | Koppla felet till leveranskriteriet, logga evidens och åtgärda som verkligt hinder. |
-| Användaren lägger uttryckligen till stöd för H0. | Uppdatera omfattning och konsekvenser synligt. Använd inte scope-regeln för att avvisa användarens beslut. |
-| ”Kanske borde vi lägga till H0?” | Behandla som idé, förklara konsekvensen innan den blir ett krav. |
-| Ny session i ett annat verktyg. | Läs aktuell plan, senaste logg och relevanta filer; återuppta nästa steg utan att hitta på ny plan. |
-| En tidigare lösning misslyckades. | Behåll kort anteckning om försöket, utfallet och skälet till nästa vägval. |
-| Ingen tidsram har diskuterats. | Planera ordning och milstolpar utan fabricerat slutdatum. |
-| En AI arbetar i en gammal klon. | Läs/synka enligt projektets arbetsflöde och bevara andras ändringar; skriv inte över aktuell status. |
+| “Change the timeout from 10 to 20 in this configuration.” No broader project context. | Make the bounded change and perform a relevant check. Do not create a project plan or log. |
+| The same configuration change is part of an ongoing production migration. | Read project context, follow its requirements and update relevant status/log entries proportionately. Do not create another project. |
+| A new multi-step project has no acceptance criteria. | Establish the outcome, deliverables, a few verifiable criteria and scope before substantial work. Ask only about material ambiguities. |
+| Work begins on a step previously marked Not started. | Mark it In progress when work starts, not only in the final report. |
+| Implementation is complete but agreed verification remains. | Keep the step In progress, or Blocked with a reason and owner. Record what has actually been checked. |
+| A deliverable needs a physical test or external review. | Identify the blocked criterion, the required action and any independent current-phase work. Do not substitute optional development. |
+| All release criteria pass, but additional export formats would be useful. | Close the phase and defer the extra formats. |
+| A delivery package is missing a required component. | Connect the defect to the acceptance criterion, record evidence and fix it as a genuine blocker. |
+| The user explicitly adds another required export format. | Update scope and consequences visibly. Do not use scope control to reject the explicit decision. |
+| “Maybe we should support another format?” | Treat it as an idea and explain its impact before turning it into a requirement. |
+| Work resumes in a different tool. | Read the current plan, recent log and relevant files; continue the next step without inventing a new plan. |
+| An earlier approach failed. | Preserve a concise record of the attempt, outcome and reason for changing direction. |
+| No timeframe has been discussed. | Plan dependencies and milestones without inventing a completion date. |
+| An assistant is working in an outdated clone. | Read/synchronize through the project's normal workflow and preserve others' changes; do not overwrite current status. |
+| An adopting project uses a language other than English. | Follow its communication and documentation conventions. This repository's English-language maintenance rule does not impose English on adopting projects. |

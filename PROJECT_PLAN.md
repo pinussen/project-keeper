@@ -3,7 +3,7 @@
 ## Outcome and scope
 Provide reusable, tool-independent project-management instructions and usage documentation in this repository. Keep rules here; keep each adopting project's plan and work log in that project's repository or existing system of record.
 
-This baseline captures the user's decisions from 2026-10-08. Explicit user changes may revise it; optional discoveries do not extend it.
+This baseline captures the project requirements established on 2026-10-08. Explicit user changes may revise it; optional discoveries do not extend it.
 
 ## Acceptance criteria
 | ID | Criterion | Verification | Status |
@@ -24,7 +24,7 @@ This baseline captures the user's decisions from 2026-10-08. Explicit user chang
 | P5 | Publish baseline | P4 | AI | Done | Remote main 938189f verified against local baseline |
 
 ## Timing
-No deadline agreed. First milestone: repository baseline ready to use. No invented duration estimates. Installation in the user's environments is a separate later task.
+No deadline agreed. First milestone: repository baseline ready to use. No invented duration estimates. Installation in adopting environments is a separate task.
 
 ## Blockers
 None established.
@@ -38,8 +38,19 @@ None established.
 ## Phase 2 / exclusions
 - Automatic installer/updater and cross-machine synchronization.
 - Portfolio dashboard or central status database.
-- Installation or runtime testing on the user's devices, servers and agents.
-- Migration of the existing ChatGPT finish-phase-one skill.
+- Installation or runtime testing in adopting environments.
+- Migration of unrelated existing instruction systems.
 
 ## Handoff
 Current phase: initial baseline complete. All acceptance criteria passed. Installation on user devices and actual tool-runtime validation remain outside this phase; no phase-2 work has started. Reviewable instructions are the deliverable, not proof of compliance by every model.
+
+## Follow-up: public, English-language documentation
+Explicit scope change, 2026-10-08: make the repository generic and suitable for a worldwide audience.
+
+| Step | Acceptance criterion | Status | Evidence |
+| --- | --- | --- | --- |
+| G1 | All maintained repository content is English; examples are broadly applicable and personal setup references are removed. | Done | README, tool guide and examples translated; personal setup references removed |
+| G2 | Contributor guidance preserves the English, generic baseline; adapters and documentation links remain valid. | Done | All tracked text reviewed, local links valid, six adapters verified |
+| G3 | Publish and verify the update. | In progress | Ready to publish |
+
+No new tool integrations or installation features are included.

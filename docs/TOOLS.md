@@ -1,50 +1,50 @@
-# Användning i olika verktyg
+# Using Project Keeper with different tools
 
-Kontrollerat mot officiell dokumentation 2026-10-08. Verktygsversion, agenttyp och vald miljö kan påverka hur instruktioner laddas. De här anvisningarna installerar inget automatiskt.
+Checked against official documentation on 2026-10-08. Tool version, agent type and execution environment can affect instruction loading. This guide does not install anything automatically.
 
-## Gemensam princip
+## Common approach
 
-PROJECT_KEEPER.md är regelkällan. Adaptrarna innehåller samma text med verktygsspecifik frontmatter där den behövs. Generera dem med scripts/build_adapters.py; redigera inte kopiorna separat.
+PROJECT_KEEPER.md is the canonical policy. Adapters contain the same text with tool-specific frontmatter where necessary. Generate them with scripts/build_adapters.py; do not maintain separate copies by hand.
 
-Läs befintliga instruktioner innan installation. Använd en separat fil när det stöds; annars infoga ett avgränsat Project Keeper-avsnitt utan att ersätta befintligt innehåll. Vid uppdatering ersätt endast det avsnittet och undvik dubletter. Byt inte ut en befintlig AGENTS.md eller CLAUDE.md mot en länk som skulle dölja dess andra instruktioner.
+Read existing instructions before installation. Use a separate file where supported; otherwise insert a clearly bounded Project Keeper section without replacing unrelated content. On updates, replace only that section and avoid duplicates. Do not replace an existing AGENTS.md or CLAUDE.md with a link that would hide its other instructions.
 
-Installerade regler ska finnas där agenten faktiskt körs. Lokal Windows, WSL, SSH, container och server kan vara olika miljöer med egna hemkataloger. Ett separat klonat repo laddas inte automatiskt bara för att det finns på disken.
+Install instructions where the assistant actually runs. Native Windows, WSL, SSH sessions, containers and servers can have different home directories. A separately cloned repository is not automatically loaded merely because it exists on disk. In the table below, `~` denotes the home directory of the account running the tool; use the appropriate native path for that environment.
 
-## Platser
+## Instruction locations
 
-| Verktyg | Adapter | Placering / aktivering |
+| Tool | Adapter | Location or activation |
 | --- | --- | --- |
-| Kiro IDE/CLI | adapters/kiro/project-keeper.md | Separat fil i ~/.kiro/steering/ för alla lokala projekt, eller .kiro/steering/ i ett projekt. inclusion: always anges i filen. |
-| Codex CLI | adapters/codex/AGENTS.md | Infoga i aktiv global instruktionsfil under CODEX_HOME, normalt ~/.codex/AGENTS.md. Om AGENTS.override.md finns väljs den i stället. Projektets egna instruktioner kan påverka slutresultatet. |
-| Claude Code CLI och Claude Code-extensionen i VS Code | adapters/claude/CLAUDE.md | Infoga i ~/.claude/CLAUDE.md, eller använd en dokumenterad @path-import till den klonade PROJECT_KEEPER.md. Använd den verkliga lokala sökvägen. |
-| Copilot Agent Host i VS Code | adapters/copilot/copilot-instructions.md | Infoga i ~/.copilot/copilot-instructions.md för personliga instruktioner. |
-| Copilot Local i VS Code | adapters/copilot/project-keeper.instructions.md | Skapa en användarinstruktion via Chat: Open Customizations för vald agent och använd adapterns innehåll. applyTo: "**" täcker matchande filarbete. |
-| Copilot projektinstruktioner | adapters/copilot/copilot-instructions.md | Infoga i projektets .github/copilot-instructions.md, även för projektchatt där en filmatchad instruktion inte nödvändigtvis aktiveras. |
-| OpenClaw | adapters/openclaw/AGENTS.md | Infoga i AGENTS.md i varje berörd agents verkliga workspace. Standardworkspace är ofta ~/.openclaw/workspace, men kontrollera aktuell konfiguration. |
+| Kiro IDE/CLI | adapters/kiro/project-keeper.md | A separate file under ~/.kiro/steering/ for local projects, or .kiro/steering/ within a project. The adapter specifies inclusion: always. |
+| Codex CLI | adapters/codex/AGENTS.md | Insert into the active global instruction file under CODEX_HOME, normally ~/.codex/AGENTS.md. If AGENTS.override.md exists, it takes precedence at that level. Project instructions can affect the resulting behavior. |
+| Claude Code CLI and the Claude Code VS Code extension | adapters/claude/CLAUDE.md | Insert into ~/.claude/CLAUDE.md, or use a documented @path import pointing to the cloned PROJECT_KEEPER.md. Use the actual local path. |
+| Copilot Agent Host in VS Code | adapters/copilot/copilot-instructions.md | Insert into ~/.copilot/copilot-instructions.md for personal instructions. |
+| Copilot Local in VS Code | adapters/copilot/project-keeper.instructions.md | Create a user instruction through Chat: Open Customizations for the selected agent and use the adapter contents. applyTo: "**" covers matching file work. |
+| Copilot project instructions | adapters/copilot/copilot-instructions.md | Insert into the project's .github/copilot-instructions.md, including for project conversations where a file-matched instruction might not activate. |
+| OpenClaw | adapters/openclaw/AGENTS.md | Insert into AGENTS.md in each relevant agent's actual workspace. The default is commonly ~/.openclaw/workspace, but check the active configuration. |
 
-Kiro custom agents behöver uttryckligen inkludera relevanta steering-filer i sina resources. Anta inte att global steering automatiskt följer med varje custom agent.
+Kiro custom agents need to include the relevant steering files explicitly in their resources. Do not assume global steering reaches every custom agent automatically.
 
-”Claude i VS Code” kan betyda två saker: Claude-modellen vald i Copilot använder Copilots instruktioner; Claude Code-extensionen använder Claude Codes instruktioner.
+“Claude in VS Code” can mean either the Claude model selected in Copilot, which uses Copilot instructions, or the Claude Code extension, which uses Claude Code instructions.
 
-Copilots instruktioner gäller agent/chat, inte inline-komplettering medan du skriver. För Copilot Local är en användarinstruktion med filmatchning inte en garanti för att ren planeringschatt alltid får den; använd projektinstruktionen eller bifoga instruktionen där det behövs. Välj rätt agenttyp i VS Codes inställningar för instruktioner.
+Copilot instructions apply to agent/chat interactions, not inline completions while typing. For Copilot Local, file-matched user instructions do not guarantee inclusion in a planning-only conversation. Use project instructions or attach the instruction when necessary. Select the appropriate agent type in VS Code's customization settings.
 
-OpenClaw ska återanvända befintlig ärendehantering för planen när sådan finns. Arbetsloggen ska fortfarande finnas i projektets repo och länka relevant ärende. En workspace-instruktion ersätter inte projektets faktiska status.
+OpenClaw should reuse an existing issue or planning system when one is already authoritative. Keep the work log in the project's repository and link the relevant issue. Workspace instructions do not replace the project's actual status.
 
-## Import, länk eller kopia
+## Import, link or copy
 
-Claude Code har dokumenterad @path-import i CLAUDE.md. Den syntaxen ska inte antas fungera i andra appar. För en fristående instruktionsfil kan en symbolisk länk vara praktisk om den aktuella miljön stöder och faktiskt läser den; kontrollera detta lokalt. En vanlig kopia är enklare men måste uppdateras efter git pull. Automatiserad installation/synkning ingår inte i första versionen.
+Claude Code supports documented @path imports in CLAUDE.md. Do not assume that syntax works in other tools. For a standalone instruction file, a symbolic link can be useful if the environment supports and actually reads it; verify this locally. A regular copy is straightforward but must be updated after git pull. Automated installation and synchronization are outside the initial scope.
 
-## Installationsprompt till en lokal agent
+## Installation prompt for a local assistant
 
-> Läs Project Keepers README.md, PROJECT_KEEPER.md och docs/TOOLS.md. Installera reglerna för det verktyg och den miljö vi arbetar i. Identifiera först den faktiska instruktionsplatsen och läs befintliga filer. Bevara allt orelaterat innehåll och ta backup av filer som ändras. Använd en separat fil eller dokumenterad import där det passar; annars ett tydligt avgränsat avsnitt som uppdateras utan dubletter. Ändra inte andra verktygs konfiguration om de inte ingår i min begäran. Återanvänd projektets plan och logg. Rapportera vilka filer som ändrades och vad som behöver kontrolleras i en ny session. Påstå inte att reglerna laddats enbart för att en fil skapats.
+> Read Project Keeper's README.md, PROJECT_KEEPER.md and docs/TOOLS.md. Install its instructions for the tool and environment we are using. First identify the actual instruction location and read existing files. Preserve unrelated content and back up files before changing them. Use a separate file or documented import where appropriate; otherwise use a clearly bounded section that can be updated without duplication. Do not change other tools' configuration unless they are included in my request. Reuse the project's plan and work log. Report which files changed and what needs checking in a new session. Do not claim the instructions were loaded merely because a file was created.
 
-## Kontrollera aktivering
+## Checking activation
 
-Öppna en ny session och kontrollera instruktionslistan/referenserna där verktyget erbjuder det. Kontrollera faktiska sökvägar och eventuella overrides om instruktionen saknas. Prova relevanta beteendeexempel i EXAMPLES.md. Ett korrekt enstaka svar är inte bevis för att alla framtida svar följer reglerna.
+Open a new session and inspect the loaded instruction list or references where the tool provides them. If the instruction is missing, check actual paths and overrides. Try relevant scenarios from EXAMPLES.md. One successful response is not proof that every future response will follow the policy.
 
-Håll samma aktuella projektplan tillgänglig när du byter verktyg. För flera kloner krävs vanlig versionshantering eller en gemensam läsbar ärendekälla; osynkade statuskopior ger ingen kontinuitet.
+Keep the same current project plan available when switching tools. Multiple clones require normal version control or a shared, readable planning source. Unsynchronized status copies do not provide continuity.
 
-## Officiella källor
+## Official sources
 
 - Kiro: https://kiro.dev/docs/steering/
 - Codex: https://developers.openai.com/codex/guides/agents-md

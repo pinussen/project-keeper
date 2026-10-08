@@ -1,7 +1,7 @@
 # Work log
 
 ## 2026-10-08 — baseline planning
-- User supplied https://github.com/pinussen/project-keeper after agreeing the project-management requirements.
+- Initialized https://github.com/pinussen/project-keeper for the agreed project-management workflow.
 - Cloned the repository; Git reported an empty repository, so no existing project files or instructions needed preservation.
 - Created PROJECT_PLAN.md with fixed acceptance criteria, work steps and explicit exclusions.
 - Started P1. No user environments have been configured; no live agent behavior has been tested.
@@ -9,7 +9,7 @@
 ## 2026-10-08 — policy and templates
 - Completed P1/P2: added canonical PROJECT_KEEPER.md and lightweight plan/log templates.
 - Policy covers small-task exemption, live status transitions, durable evidence-based logging, milestones, explicit scope changes and handoffs.
-- Moved P3 to In progress. Tool guidance uses the official documentation retrieved in this conversation; actual installation remains outside this baseline.
+- Moved P3 to In progress. Tool guidance uses the official documentation consulted during baseline development; actual installation remains outside this baseline.
 
 ## 2026-10-08 — adapters and usage guide
 - Completed P3 with six generated adapters, a standard-library-only generator, README, tool setup guide and behavioral examples.
@@ -31,3 +31,13 @@
 - Published baseline commit 938189f182be504db68b4aabc1642ff9da8188ca to main.
 - Fetched remote main and compared every one of the 16 repository files byte-for-byte with the local baseline: all matched.
 - Marked A5/P5 complete and closed the baseline phase. This follow-up records completion evidence; user-environment installation and runtime testing are not claimed.
+
+## 2026-10-08 — public-audience update started
+- Explicit requirement: maintain generic, English-language repository content for a worldwide audience.
+- Started G1. Translate README and tool documentation, generalize examples and remove personal setup assumptions. Preserve historical results and core workflow behavior.
+
+## 2026-10-08 — public-audience content verified
+- Translated README.md, docs/TOOLS.md and docs/EXAMPLES.md into English; replaced domain-specific examples with general delivery scenarios.
+- Removed the unrelated personal skill reference from current scope and clarified English maintenance requirements in AGENTS.md without imposing a language on adopting projects.
+- Made two editorial changes to earlier log entries to remove conversation-specific phrasing; historical events and verification evidence remain unchanged.
+- Reviewed all tracked text, checked relative links and ran build_adapters.py --check: all six adapters still match. Core policy behavior is unchanged. G1/G2 complete; G3 publication in progress.
