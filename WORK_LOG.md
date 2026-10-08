@@ -26,3 +26,8 @@
 - Direct Git push could not authenticate in this environment; no repository data was overwritten.
 - The connected GitHub integration confirmed write access and created README.md on main (b9919fc1e69bcf64dec507d521e40d2013b1b534).
 - Publishing the remaining baseline through that integration. Remote verification is still pending.
+
+## 2026-10-08 — phase complete
+- Published baseline commit 938189f182be504db68b4aabc1642ff9da8188ca to main.
+- Fetched remote main and compared every one of the 16 repository files byte-for-byte with the local baseline: all matched.
+- Marked A5/P5 complete and closed the baseline phase. This follow-up records completion evidence; user-environment installation and runtime testing are not claimed.
