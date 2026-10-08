@@ -64,6 +64,8 @@ Scope change, 2026-10-08: replace the reference-only setup guide with beginner-r
 | --- | --- | --- | --- |
 | I1 | Each supported setup states prerequisites, scope, exact source/destination or menu, preservation of existing content, activation check and troubleshooting. | Done | Common start guide and separate tool recipes with checks/troubleshooting |
 | I2 | Add Cursor, Windsurf, JetBrains AI Assistant/Junie and Copilot in Visual Studio, JetBrains, Xcode and Eclipse where documented. | Done | Official sources reviewed; four new adapters generated |
-| I3 | Check generated adapters, links and installation examples; publish verified documentation. | In progress | Ten adapters verified; checking document navigation and examples |
+| I3 | Check generated adapters, links and installation examples; publish verified documentation. | Done | Ten adapters, 37 links/anchors and source paths checked; remote d6989ea matched |
 
 Automatic installers remain excluded. Provide one clear recommended route per tool before optional global alternatives.
+
+Setup-guide follow-up complete. Guides are documentation-verified, not live-tested in every IDE. No automatic installer or adopting-environment configuration was added.

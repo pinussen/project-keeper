@@ -60,3 +60,7 @@
 ## 2026-10-08 — setup guide validation
 - Checked 37 relative links/anchors, all named adapter sources, ten generated adapters and the Windsurf rule size. All passed; git diff --check was clean.
 - I3 content validation complete; publication and remote comparison are next. No IDE runtime test or local installation was performed.
+
+## 2026-10-08 — setup guides delivered
+- Published d6989eaf56c9c434f01e933bfa208bf477f1327a and verified every remote repository file against the reviewed local content (29 files).
+- Marked I3 complete. Each listed assistant has an explicit route; optional alternatives and version limitations are identified. No further phase started.
