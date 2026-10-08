@@ -41,3 +41,7 @@
 - Removed the unrelated personal skill reference from current scope and clarified English maintenance requirements in AGENTS.md without imposing a language on adopting projects.
 - Made two editorial changes to earlier log entries to remove conversation-specific phrasing; historical events and verification evidence remain unchanged.
 - Reviewed all tracked text, checked relative links and ran build_adapters.py --check: all six adapters still match. Core policy behavior is unchanged. G1/G2 complete; G3 publication in progress.
+
+## 2026-10-08 — public-audience update delivered
+- Published cf3aa107a26b4836423e418da1b24a03a05c2567 and fetched remote main. Every tracked file matched the reviewed local version byte-for-byte.
+- G3 complete. English documentation and generic usage guidance are now published; no adopting environments were modified.

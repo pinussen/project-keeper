@@ -51,6 +51,8 @@ Explicit scope change, 2026-10-08: make the repository generic and suitable for 
 | --- | --- | --- | --- |
 | G1 | All maintained repository content is English; examples are broadly applicable and personal setup references are removed. | Done | README, tool guide and examples translated; personal setup references removed |
 | G2 | Contributor guidance preserves the English, generic baseline; adapters and documentation links remain valid. | Done | All tracked text reviewed, local links valid, six adapters verified |
-| G3 | Publish and verify the update. | In progress | Ready to publish |
+| G3 | Publish and verify the update. | Done | Remote cf3aa10 verified against all tracked files |
 
 No new tool integrations or installation features are included.
+
+Follow-up complete: public documentation is English and generic. No additional phase has started.
