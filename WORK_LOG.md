@@ -109,3 +109,7 @@
 - All 15 isolated tests passed, including a real local Git fast-forward/restart update, exact historical-copy adoption, CRLF handling, backups, outside-block preservation, conflicts and registered-only updates.
 - Ten adapters match the policy; 52 relative links/anchors passed, git diff --check passed and the Windsurf adapter remains below its enforced limit (10,989 characters).
 - U4 ready for publication and practical user testing. Tests ran on Linux; native Windows/macOS and live IDE behavior were not exercised.
+
+## 2026-10-08 — installer delivered for practical testing
+- Published 8601eb78decd538e2f6d69d676ce49ec30b8182b; fetched main and verified all 34 files against local content.
+- U4 complete. Next action is a user-side dry-run for selected destinations, then an explicitly selected install. No live user configuration was changed during development.
