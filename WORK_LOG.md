@@ -89,3 +89,8 @@
 - Moved imports and project-only installation after the explicit installation-complete point. Linked onboarding as the next optional action.
 - This is a bounded documentation fix; no policy change or new feature scope. The reported loading success is not a claim of full behavioral testing.
 - Validation: all links and section anchors in the revised guide resolve; git diff --check passed.
+
+## 2026-10-08 — Kiro panel navigation clarified
+- A user-provided screenshot confirmed Project Keeper under Agent Steering & Skills → Global after opening the ghost-icon Kiro panel.
+- Expanded step 4 in docs/setup/KIRO.md with the exact navigation, Explorer distinction, nearby panel labels and expected file/breadcrumb/header. No screenshot or personal workspace details were added to the public repository.
+- This confirms UI discovery only, not behavioral compliance. Policy and adapters are unchanged.

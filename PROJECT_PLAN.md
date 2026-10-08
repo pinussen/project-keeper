@@ -83,3 +83,5 @@ No additional features are included in this follow-up.
 Current handoff: onboarding documentation delivered; ready for practical testing in an adopting environment. No further feature work has started. Runtime testing remains unperformed, not a claimed pass.
 
 Practical-test feedback, 2026-10-08: global instruction discovery in Claude CLI was reported successful. Clarified the Claude setup guide in response; broader behavior remains unverified. This documentation correction does not reopen feature scope.
+
+Practical-test feedback, 2026-10-08: a Kiro IDE screenshot confirmed global rule discovery. Added precise panel navigation to the setup guide; behavior testing remains separate.
