@@ -76,6 +76,8 @@ Scope change, 2026-10-08: add a bounded onboarding workflow, then hand the versi
 | Step | Acceptance criterion | Status | Evidence |
 | --- | --- | --- | --- |
 | O1 | Guide and canonical policy recover existing state, preserve authoritative records, label uncertainty and avoid invented history or scope expansion. | Done | docs/ONBOARDING.md and policy section 2; historical uncertainty and authorization boundaries explicit |
-| O2 | Link onboarding from setup/README, regenerate adapters, check consistency and publish. | In progress | Navigation linked; checking generated adapters and documentation |
+| O2 | Link onboarding from setup/README, regenerate adapters, check consistency and publish. | Done | Ten adapters and 42 links checked; remote b2a71f5 verified |
 
 No additional features are included in this follow-up.
+
+Current handoff: onboarding documentation delivered; ready for practical testing in an adopting environment. No further feature work has started. Runtime testing remains unperformed, not a claimed pass.

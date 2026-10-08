@@ -78,3 +78,7 @@
 - All ten regenerated adapters match the canonical policy. Checked 42 local links/anchors and git diff --check.
 - Windsurf workspace adapter is 10,373 characters, below its enforced 12,000-character limit.
 - O2 publication pending; the change is ready for practical onboarding tests, which have not been performed here.
+
+## 2026-10-08 — onboarding delivered; ready for testing
+- Published b2a71f5464efd03d5d3176089093f99c800e541d; fetched remote main and compared all 30 files with local content. All matched.
+- O2 complete. The implementation/documentation phase is closed and ready for practical testing. No actual project onboarding or IDE runtime test is claimed.
